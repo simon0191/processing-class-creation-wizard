@@ -18,33 +18,33 @@
  * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
  * Boston, MA  02111-1307  USA
  * 
- * @author		##author##
- * @modified	##date##
- * @version		##version##
+ * @author		Simon Soriano
+ * @modified	22/09/2013
+ * @version		0.0.1
  */
 
- package template.tool;
+ package processing.app.tools;
  
- import processing.app.*;
- import processing.app.tools.*;
- 
- 
- 
- public class HelloTool implements Tool {
- 
- // when creating a tool, the name of the main class which implements Tool
- // must be the same as the value defined for project.name in your build.properties
+ import javax.swing.JFrame;
+
+import processing.app.*;
+import processing.app.tools.*;
  
  
+ 
+ @SuppressWarnings("serial")
+public class ClassCreationWizard extends JFrame implements Tool {
+  
 	public String getMenuTitle() {
-		return "Hello Tool";
+		return "Class Creation Wizard";
 	}
  
 	public void init(Editor theEditor) {
 	}
  
 	public void run() {
-		System.out.println("hello Tool. ##name## ##version## by ##author##");
+		System.out.println("Class Creation Wizard Tool 0.0.1 by Simon Soriano");
+		
 	}
  
  }
